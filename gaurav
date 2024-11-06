@@ -1,0 +1,102 @@
+<form name="myForm" onsubmit="return(validate());">
+    <h2>Registration Form</h2>
+    <table>
+        <tr>
+            <td>Full Name:</td>
+            <td><input type="text" name="fname"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>Confirm Password:</td>
+            <td><input type="password" name="confirm_password"></td>
+        </tr>
+        <tr>
+            <td>Mobile Number:</td>
+            <td><input type="number" name="mobile"></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><textarea name="address"></textarea></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td><input type="text" name="city"></td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td><input type="text" name="state"></td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td><input type="text" name="country"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Register"></td>
+        </tr>
+    </table>
+</form>
+
+<script type="text/javascript">
+    function validate() {
+        var fname = document.myForm.fname.value;
+        var email = document.myForm.email.value;
+        var password = document.myForm.password.value;
+        var confirm_password = document.myForm.confirm_password.value;
+        var mobile = document.myForm.mobile.value;
+        var address = document.myForm.address.value;
+        var city = document.myForm.city.value;
+        var state = document.myForm.state.value;
+        var country = document.myForm.country.value;
+
+        if (fname == "") {
+            alert("Name must be filled out");
+            return false;
+        }
+        if (email == "") {
+            alert("Email must be filled out");
+            return false;
+        }
+        if (password == "") {
+            alert("Password must be filled out");
+            return false;
+        }
+        if (confirm_password == "") {
+            alert("Confirm Password must be filled out");
+            return false;
+        }
+        if (password != confirm_password) {
+            alert("Password and Confirm Password must match");
+            return false;
+        }
+        if (mobile == "") {
+            alert("Mobile Number must be filled out");
+            return false;
+        }
+        if (address == "") {
+            alert("Address must be filled out");
+            return false;
+        }
+        if (city == "") {
+            alert("City must be filled out");
+            return false;
+        }
+        if (state == "") {
+            alert("State must be filled out");
+            return false;
+        }
+        if (country == "") {
+            alert("Country must be filled out");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
